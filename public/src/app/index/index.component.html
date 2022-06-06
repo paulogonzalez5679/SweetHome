@@ -1,0 +1,645 @@
+<<<<<<< HEAD
+<head>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <link href="../../assets/lib/slick/slick.css" rel="stylesheet">
+  <link href="../../assets/lib/slick/slick-theme.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="row">
+
+    <div class="col-sm-4">
+    </div>
+
+    <!--LOGO INICIAL-->
+    <div class="col-sm-4">
+      <div class="brand">
+        <div class="img-responsive b-logo " style="min-width: 100%;">
+          <a href="index.html">
+            <img src="../../assets/img/logo_inicio.svg">
+          </a>
+        </div>
+      </div>
+
+      <!--BARRA DE BUSQUEDA-->
+      <!-- <div class="  brand">
+        <div class="b-search">
+          <input type="text" placeholder="Search">
+          <button><i class="fa fa-search"></i></button>
+        </div>
+      </div> -->
+
+    </div>
+
+
+    <div class="col-sm-4 text-center iconsSocial">
+
+
+      <a class="icon a-social" href="" target="_blank"><img class="socialnetf" data-aos="fade-down"
+          data-aos-duration="1500" onmouseover="this.src='../../assets/img/face_amarillo.svg'"
+          onmouseout="this.src='../../assets/img/face_gris.svg'" src="../../assets/img/face_gris.svg"
+          alt="Facebook"></a>
+
+
+
+      <a class=" icon a-social" href="" target="_blank"><img class="socialnet" data-aos="fade-down"
+          data-aos-duration="1500" onmouseover="this.src='../../assets/img/twitter_amarillo.svg'"
+          onmouseout="this.src='../../assets/img/twitter_gris.svg'" src="../../assets/img/twitter_gris.svg"
+          alt="Twitter"></a>
+
+
+      <a class=" icon a-social" href="" target="_blank"><img class="socialnet" data-aos="fade-down"
+          data-aos-duration="1500" onmouseover="this.src='../../assets/img/insta_amarillo.svg'"
+          onmouseout="this.src='../../assets/img/insta_gris-01.svg'" src="../../assets/img/insta_gris-01.svg"
+          alt="Instagram"></a>
+
+
+      <a class="icon a-social" href="" target="_blank"><img class="socialnet" data-aos="fade-down"
+          data-aos-duration="1500" onmouseover="this.src='../../assets/img/wpp_amarillo.svg'"
+          onmouseout="this.src='../../assets/img/wpp.svg'" src="../../assets/img/wpp.svg" alt="Whatsapp"></a>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 text-center"> <span class="opc">QUIENES SOMOS</span> </div>
+    <div class="col-sm-4 text-center"> <span class="opc">IDENTIDAD C.</span> </div>
+    <div class="col-sm-4 text-center"> <span class="opc">CONTACTOS</span></div>
+  </div>
+
+  <!--Menu-->
+  <nav #pagesnavbar class="navbar navbar-primary bg-gradient navDimensiones" >
+    <div class="container">
+      <div class="navbar-header" style="min-width: 100%;">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" (click)="sidebarToggle()">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" style="margin-top: 0px !important;">
+        <ul class="nav navbar-nav navbar-right text-center ">
+          <li>
+            <a href="single-page.html" class="menu">SALAS</a>
+          </li>
+          <li>
+            <a href="single-page.html" class="menu">COMEDORES</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu">DORMITORIOS</a>
+          </li>
+          <li>
+            <a href="single-page.html" class="menu">DECORACIÓN</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu">ESCRITORIOS</a>
+          </li>
+          <li>
+            <a href="single-page.html" class="menu">EXTERIORES</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu">ALFOMBRAS</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu">ILUMINACIÓN</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu">BAR</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu">NIÑOS</a>
+          </li>
+          <li>
+            <a href="contact.html" class="menu">NAVIDAD</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Carousel-->
+  <section>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="../../assets/img/portada1.jpg" style="width: 100%;" alt="Los Angeles">
+        </div>
+  
+        <div class="item">
+          <img src="../../assets/img/portada2.jpg" style="width: 100%;" alt="Chicago">
+        </div>
+  
+        <div class="item">
+          <img src="../../assets/img/portada3.jpg" style="width: 100%;" alt="New York">
+        </div>
+
+        <div class="item">
+          <img src="../../assets/img/portada4.jpg" style="width: 100%;" alt="New York">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="fa fa-arrow-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="fa fa-arrow-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Servicios Inicio -->
+
+  <section class="content-section bg-white mt-3" id="serviciosSection">
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-15mx-auto">
+          <img data-aos="flip-left" data-aos-duration="1500" class="imgSectionsServicios"
+            src="../../assets/img/icono1.svg" alt="servicios">
+        </div>
+        <div class="col-lg-15 mx-auto">
+          <img data-aos="flip-left" data-aos-duration="1500" class="servicios mt-5"
+            src="../../assets/img/nuestros productos.svg" alt="consejos">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-15 mx-auto text-center">
+        <p>La experiencia en Sweet Home será inolvidable, la podrás vivir en familia y encontrar artículos ideales </p>
+        <p>para que todos los miembros se sientan especiales.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PADDING SERVICIOS-->
+  <section class="content-section" id="serviciosSection">
+    <div class="row row-servicios text-center">
+      <div class="col-lg-1 col-md-8 col-servicios">
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ1')" (mouseout)="tests2('icoServ1')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ1">
+          <img class="img-icons-servicios mb-4 mx-auto  " id="icoServ1" [src]="imgSrc1" alt="SALAS">
+          <p class="card-text-grey">SALAS</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ2')" (mouseout)="tests2('icoServ2')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ2">
+          <img class="img-icons-servicios mb-4 mx-auto  " id="icoServ2" [src]="imgSrc2" alt="COMEDORES">
+          <p class="card-text-grey">COMEDORES</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ3')" (mouseout)="tests2('icoServ3')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ3">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ3" [src]="imgSrc3" alt="DORMITORIOS">
+          <p class="card-text-grey">DORMITORIOS</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ4')" (mouseout)="tests2('icoServ4')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ4">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ4" [src]="imgSrc4" alt="DECORACION">
+          <p class="card-text-grey">DECORACION</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ5')" (mouseout)="tests2('icoServ5')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ5">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ5" [src]="imgSrc5" alt="ESCRITORIO">
+          <p class="card-text-grey">ESCRITORIOS</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row row-servicios text-center">
+      <div class="col-lg-1 col-md-8 col-servicios">
+      </div>
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ6')" (mouseout)="tests2('icoServ6')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ6">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ6" [src]="imgSrc6" alt="EXTERIORES">
+          <p class="card-text-grey">EXTERIORES</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ7')" (mouseout)="tests2('icoServ7')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ7">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ7" [src]="imgSrc7" alt="ALFOMBRAS">
+          <p class="card-text-grey">ALFOMBRAS</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ8')" (mouseout)="tests2('icoServ8')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ8">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ8" [src]="imgSrc8" alt="ILUMINACION">
+          <p class="card-text-grey">ILUMINACIÓN</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ9')" (mouseout)="tests2('icoServ9')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ9">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ9" [src]="imgSrc9" alt="BAR">
+          <p class="card-text-grey">BAR</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-8 col-servicios">
+        <div (mouseover)="tests('icoServ10')" (mouseout)="tests2('icoServ10')" data-aos="flip-left"
+          data-aos-duration="1500" class="card-servicios" id="cardServ10">
+          <img class="img-icons-servicios mb-4 mx-auto" id="icoServ10" [src]="imgSrc10" alt="NIÑOS">
+          <p class="card-text-grey">NIÑOS</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Panel "lo mas vendido"-->
+  <section>
+    <div class="pannels">
+      <div>
+        <img class="pannelFront" src="../../assets/img/lo mas vendido.svg" />
+      </div>
+    </div>
+  </section>
+
+  <!--SECCION SALAS-->
+  <section>
+    <div class="row no-gutters card-space">
+      <div class="col-7">
+        <img class="card-img " src="../../assets/img/salas.jpg" alt="SALAS">
+      </div>
+      <div class="col-3 col-qs col-lg-4 col-md-8" style="margin-left: 3vmax;">
+        <p style="padding-left: 230px;border-top-style: 20px;padding-top: 200px;"> SALAS</p>
+      </div>
+    </div>
+  </section>
+
+  <!--MENU SALAS-->
+  <section>
+    <div class="row container3 align-items-center">
+      <div class="container">
+        <div class="row mb-12 align-content-center ventas-cabecera">
+          <div class="col-sm text-right  salas">LO MÁS VENDIDO</div>
+          <div class="col-sm-3 text-center  salas">NUEVOS</div>
+          <div class="col-sm text-left  salas">PRODUCTOS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--PRODUCTOS SALA-->
+  <section>
+    <br>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col no-gutters">
+          <img class="card-img-ventas" src="../../assets/img/sala1.jpg" alt="SALA VERDE">
+          <p class="menu">SALA VERDE ROSA</p>
+          <p>$0000</p>
+        </div>
+        <div class="col">
+          <img class="card-img-ventas" src="../../assets/img/sala2.jpg" alt="SALA AMARILLA">
+          <p>SALA AMARILLA</p>
+          <p>$0000</p>
+        </div>
+        <div class="col">
+          <img class="card-img-ventas" src="../../assets/img/sala3.jpg" alt="SALA NARANJA">
+          <p>SALA NARANJA</p>
+          <p>$0000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+=======
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <!--LOGO INICIAL-->
+  <div class="col-sm-4">
+    <div class="imgb-logo -responsive ">
+      <a href="index.html">
+        <img src="../../assets/img/logo_inicio.svg">
+      </a>
+    </div>
+    <!--BARRA DE BUSQUEDA-->
+    <!-- <div class="  brand">
+          <div class="b-search">
+            <input type="text" placeholder="Search">
+            <button><i class="fa fa-search"></i></button>
+          </div>
+        </div> -->
+
+  </div>
+
+
+  <div class="col-sm-4 text-center iconsSocial">
+
+
+    <a class="icon a-social" href="" target="_blank"><img class="socialnetf" data-aos="fade-down"
+        data-aos-duration="1500" onmouseover="this.src='../../assets/img/face_amarillo.svg'"
+        onmouseout="this.src='../../assets/img/face_gris.svg'" src="../../assets/img/face_gris.svg" alt="Facebook"></a>
+
+
+
+    <a class=" icon a-social" href="" target="_blank"><img class="socialnet" data-aos="fade-down"
+        data-aos-duration="1500" onmouseover="this.src='../../assets/img/twitter_amarillo.svg'"
+        onmouseout="this.src='../../assets/img/twitter_gris.svg'" src="../../assets/img/twitter_gris.svg"
+        alt="Twitter"></a>
+
+
+    <a class=" icon a-social" href="" target="_blank"><img class="socialnet" data-aos="fade-down"
+        data-aos-duration="1500" onmouseover="this.src='../../assets/img/insta_amarillo.svg'"
+        onmouseout="this.src='../../assets/img/insta_gris-01.svg'" src="../../assets/img/insta_gris-01.svg"
+        alt="Instagram"></a>
+
+
+    <a class="icon a-social" href="" target="_blank"><img class="socialnet" data-aos="fade-down"
+        data-aos-duration="1500" onmouseover="this.src='../../assets/img/wpp_amarillo.svg'"
+        onmouseout="this.src='../../assets/img/wpp.svg'" src="../../assets/img/wpp.svg" alt="Whatsapp"></a>
+
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-sm-4 text-center">QUIENES SOMOS</div>
+  <div class="col-sm-4 text-center">IDENTIDAD C.</div>
+  <div class="col-sm-4 text-center">CONTACTOS</div>
+</div>
+
+<nav #pagesnavbar class="navbar navbar-primary bg-gradient" style="z-index: 10000000000 !important;">
+  <div class="container">
+    <div class="navbar-header" style="min-width: 100%;">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" (click)="sidebarToggle()">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" style="margin-top: 0px !important;">
+      <ul class="nav navbar-nav navbar-right text-center ">
+        <li>
+          <a href="single-page.html" class="menu">SALAS</a>
+        </li>
+        <li>
+          <a href="single-page.html" class="menu">COMEDORES</a>
+        </li>
+        <li>
+          <a href="contact.html" class="menu">DORMITORIOS</a>
+        </li>
+        <li>
+          <a href="single-page.html" class="menu">DECORACIÓN</a>
+        </li>
+        <li>
+          <a href="contact.html" class="menu">ESCRITORIOS</a>
+        </li>
+        <li>
+          <a href="single-page.html" class="menu">EXTERIORES</a>
+        </li>
+        <li>
+          <a href="contact.html" class="menu">ALFOMBRAS</a>
+        </li>
+        <li>
+          <a href="contact.html" class="menu">ILUMINACIÓN</a>
+        </li>
+        <li>
+          <a href="contact.html" class="menu">BAR</a>
+        </li>
+        <li>
+          <a href="contact.html" class="menu">NIÑOS</a>
+        </li>
+        <li>
+          <a href="contact.html" class="menu">NAVIDAD</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../../assets/img/portada1.jpg" style="width: 100%;" alt="Los Angeles">
+      </div>
+
+      <div class="item">
+        <img src="../../assets/img/portada2.jpg" style="width: 100%;" alt="Chicago">
+      </div>
+
+      <div class="item">
+        <img src="../../assets/img/portada3.jpg" style="width: 100%;" alt="New York">
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="fa fa-arrow-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="fa fa-arrow-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
+>>>>>>> e44ea0c10e6f382755e43eb2e4678fe7ec793a7d
+
+<section class="content-section bg-white" id="serviciosSection">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <img data-aos="flip-left" data-aos-duration="1500" class="imgSectionsServicios mt-5"
+          src="../../assets/img/icono1.svg" alt="FOCO">
+      </div>
+      <div class="col-lg-12 mx-auto">
+        <img data-aos="flip-left" data-aos-duration="1500" class="servicios mt-5"
+          src="../../assets/img/nuestros productos.svg" alt="consejos">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 mx-auto text-center">
+      <p>La experiencia en Sweet Home será inolvidable, la podrás vivir en familia y encontrar artículos ideales </p>
+      <p>para que todos los miembros se sientan especiales.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PADDING SERVICIOS-->
+<section class="content-section" id="serviciosSection">
+  <div class="row row-servicios text-center">
+    <div class="col-lg-2 col-md-2 col-servicios">
+      <div (mouseover)="tests('icoServ1')" (mouseout)="tests2('icoServ1')" data-aos="flip-left" data-aos-duration="1500"
+        class="card-servicios" id="cardServ1">
+
+        <!-- <img 
+        onmouseover="this.src='../../assets/img/salas_blanco.svg'"
+        onmouseout="this.src='../../assets/img/salas.svg'"  -->
+        <img class="img-icons-servicios mb-4 mx-auto  " id="icoServ1" [src]="imgSrc1" alt="SALAS">
+        <p class="card-text-grey">SALAS</p>
+
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ2">
+        <img class="img-icons-servicios mb-4 mx-auto  " id="icoServ2" src="../../assets/img/comedores.svg"
+          alt="COMEDORES">
+        <p class="card-text-grey">COMEDORES</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ3">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ3" src="../../assets/img/dormitorios.svg"
+          alt="DORMITORIOS">
+        <p class="card-text-grey">DORMITORIOS</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ4">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ4" src="../../assets/img/decoracion.svg"
+          alt="DECORACION">
+        <p class="card-text-grey">DECORACION</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ5">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ5" src="../../assets/img/escritorios.svg"
+          alt="ESCRITORIO">
+        <p class="card-text-grey">ESCRITORIOS</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ6">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ6" src="../../assets/img/exteriores.svg"
+          alt="EXTERIORES">
+        <p class="card-text-grey">EXTERIORES</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ7">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ7" src="../../assets/img/alfombras.svg"
+          alt="ALFOMBRAS">
+        <p class="card-text-grey">ALFOMBRAS</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ8">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ8" src="../../assets/img/iluminacion.svg"
+          alt="ILUMINACION">
+        <p class="card-text-grey">ILUMINACIÓN</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ9">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ9" src="../../assets/img/bar.svg" alt="BAR">
+        <p class="card-text-grey">BAR</p>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-8 col-servicios">
+      <div data-aos="flip-left" data-aos-duration="1500" class="card-servicios" id="cardServ10">
+        <img class="img-icons-servicios mb-4 mx-auto" id="icoServ10" src="../../assets/img/niños.svg" alt="NIÑOS">
+        <p class="card-text-grey">NIÑOS</p>
+      </div>
+    </div>
+    <div class="space-t2">
+      <br>
+    </div>
+  </section>
+
+  <!--SECCION HORARIO DE ATENCION-->
+  <section class="content-section">
+    <div class="space-t3">
+      <div style="background-color: #e2e2e2;">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <img data-aos="flip-left" data-aos-duration="1500" class="imgHorario mt-5"
+                src="../../assets/img/horario icono.svg" alt="horario">
+            </div>
+            <div class="col-lg-10 mx-auto">
+              <img data-aos="flip-left" data-aos-duration="1500" class="imgHorarioText mt-5"
+                src="../../assets/img/horario de atencion.svg" alt="consejos">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container text-center space-t4" style="min-width: 20% !important;">
+          <div class="row">
+            <div class="col card-img-fondo no-gutters " style="border-right: solid #606060;">
+              <p>CUENCA</p>
+              <p> Lunes a viernes: 9:30 am – 18:30 pm</p>
+              <p>Sábado: 10:00 am a 16:00 pm </p>
+
+            </div>
+            <div class="col card-img-fondo no-gutters ">
+              <p>GUAYAQUIL</p>
+              <p> Lunes a viernes: 10:00 am – 19:00 pm </p>
+              <p> Sábado: 10:00 am a 16:00 pm </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+  </div>
+</section>
+<!-- /PADDING SERVICIOS-->
+
+
+<!--Panel "lo mas vendido"-->
+<section>
+  <div class="pannels">
+    <div>
+      <img class="pannelFront" src="../../assets/img/lo mas vendido.svg" />
+    </div>
+  </div>
+</section>

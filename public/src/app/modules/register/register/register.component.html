@@ -1,0 +1,89 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-md-offset-4  ">
+            <form method="#" action="#">
+
+              <!--   if you want to have the card without animation please remove the ".card-hidden" class   -->
+              <div class="card card-hidden">
+                <div class="header text-center">Registro de usuarios</div>
+                <form #registerForm="ngForm" novalidate (ngSubmit)="onRegister(registerForm.value, registerForm.valid)">
+
+                  <div class="content">
+                    <div class="form-group">
+                      <input type="hidden" name="login_type" placeholder="login_type" class="form-control"
+                        [(ngModel)]="userRegister.login_type" #login_type="ngModel">
+                        <input type="hidden" name="url_photo" placeholder="url_photo" class="form-control"
+                        [(ngModel)]="userRegister.url_photo" #url_photo="ngModel">
+
+
+                      <input type="text" name="nombre" required placeholder="Nombre" class="form-control"
+                        [(ngModel)]="userRegister.nombre" required #nombre="ngModel">
+                      <small [hidden]="nombre.valid || (nombre.pristine && !registerForm.submitted)"
+                        class="text-danger">
+                        Ingrese el nombre
+                      </small>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="cell_phone" required placeholder="Teléfono" class="form-control"
+                        [(ngModel)]="userRegister.cell_phone" required #cell_phone="ngModel">
+                      <small [hidden]="cell_phone.valid || (cell_phone.pristine && !registerForm.submitted)"
+                        class="text-danger">
+                        Ingrese el teléfono
+                      </small>
+                    </div>
+                    <!-- <div class="form-group">
+                      <input type="text" name="compania" required placeholder="Company" class="form-control"
+                        [(ngModel)]="userRegister.compania" required #compania="ngModel">
+                      <small [hidden]="compania.valid || (compania.pristine && !registerForm.submitted)"
+                        class="text-danger">
+                        Ingrese nombre de su compañia
+                      </small>
+                    </div> -->
+
+
+                    <div class="form-group">
+                      <input type="text" name="email" placeholder="Enter email" class="form-control"
+                        [(ngModel)]="userRegister.email" required #email="ngModel"
+                        pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+                      <small [hidden]="email.valid || (email.pristine && !registerForm.submitted)" class="text-danger">
+                        Email inválido.
+                      </small>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" type="password" name="password" placeholder="Password" class="form-control"
+                        [(ngModel)]="userRegister.password" required minlength="6" #password="ngModel">
+                      <small [hidden]="password.valid || (password.pristine && !registerForm.submitted)"
+                        class="text-danger">
+                        ingrese contraseña.
+                      </small>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" type="password" name="confirPassword" placeholder="Password Confirmation"
+                        class="form-control" [(ngModel)]="userRegister.confirPassword" required minlength="6"
+                        #confirPassword="ngModel">
+                      <small
+                        [hidden]="confirPassword.valid || (confirPassword.pristine && !registerForm.submitted)"
+                        class="text-danger">
+                        ingrese contraseña.
+                      </small>
+                    </div>
+
+                  </div>
+                  <div class="footer text-center">
+                    <button type="submit" class="btn btn-fill btn-danger btn-wd">Registrar</button>
+                  </div>
+
+                </form>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

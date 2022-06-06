@@ -1,0 +1,127 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Perfil</h4>
+          </div>
+          <div class="content">
+            <form #formCompany="ngForm" action="" class="form-horizontal"
+              (ngSubmit)='saveUser(formCompany.value, formCompany.valid)' novalidate action="/" method="get">
+              <div class="row">
+                <div class="col-sm-4">
+                  <label for="id">ID:</label>
+                  <input type="hidden" class="form-control" name="url" id="url" placeholder="URL"
+                    [(ngModel)]="company.url" #url="ngModel" pattern="">
+                    <input type="hidden" class="form-control" name="calificacion_promedio" id="calificacion_promedio" placeholder="Calificacion"
+                    [(ngModel)]="company.calificacion_promedio" #calificacion_promedio="ngModel" pattern="">
+
+                  <input type="text" readonly class="form-control" name="id" id="id" placeholder="ID"
+                    [(ngModel)]="company.id" #id="ngModel" required pattern="">
+                  <small [hidden]="id.valid || (id.pristine && !formCompany.submitted)" class="text-danger">
+                    Obligatorio</small>
+                </div>
+                <div class="col-sm-4">
+                  <label for="id">Categoría del negocio:</label>
+                  <select [disabled]='disabled' class="form-control" (change)="selectCategory($event)" name="category" id="category" [(ngModel)]="company.category" #category="ngModel">
+                    <option *ngIf="company.category == ''" selected>Seleccione la categoría</option>
+                    <option *ngFor="let category of arrayCategory; let i = index" [value]="i">
+                      {{category.nombre}}
+                    </option>
+                  </select>
+                  <small [hidden]="nombre.valid || (nombre.pristine && !formCompany.submitted)" class="text-danger">
+                    Obligatorio</small>
+                </div>
+                <div class="col-sm-4">
+                  <label for="id">Nombre:</label>
+                  <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre"
+                    [(ngModel)]="company.nombre" #nombre="ngModel" required pattern="">
+                  <small [hidden]="nombre.valid || (nombre.pristine && !formCompany.submitted)" class="text-danger">
+                    Obligatorio</small>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-4">
+                  <label for="id">Email:</label>
+                  <input type="text" readonly class="form-control" name="email" id="email"
+                    placeholder="Email" [(ngModel)]="company.email" #email="ngModel"
+                    required pattern="">
+                  <small [hidden]="email.valid || (email.pristine && !formCompany.submitted)"
+                    class="text-danger"> Obligatorio</small>
+                </div>
+                <div class="col-sm-4">
+                  <label for="id">Dirección:</label>
+                  <input type="text" class="form-control" name="direccion_sector" id="direccion_sector"
+                    placeholder="Dirección" [(ngModel)]="company.direccion_sector" #direccion_sector="ngModel"
+                    required pattern="">
+                  <small [hidden]="direccion_sector.valid || (direccion_sector.pristine && !formCompany.submitted)"
+                    class="text-danger"> Obligatorio</small>
+                </div>
+                <div class="col-sm-4">
+                  <label for="id">Tiempo promedio:</label>
+                  <input type="text" class="form-control" name="tiempo_promedio_min" id="tiempo_promedio_min"
+                    placeholder="Tiempo promedio" [(ngModel)]="company.tiempo_promedio_min" #tiempo_promedio_min="ngModel"
+                    required pattern="">
+                  <small [hidden]="tiempo_promedio_min.valid || (tiempo_promedio_min.pristine && !formCompany.submitted)"
+                    class="text-danger"> Obligatorio</small>
+                </div>
+              </div>
+              <hr>
+
+              <!-- <div class="row">
+
+                <div class="col-sm-3">
+                  <button [disabled]='!formCompany.valid' type="submit"
+                    class="btn btn-fill btn-success btn-wd btn-block">
+                    <i *ngIf="isEdit" class="fa fa-edit"></i>
+                    <i *ngIf="!isEdit" class="fa fa-save"></i>
+                    {{isEdit?'Editar':'Agregar'}}
+                  </button>
+                </div>
+              </div> -->
+              <button type="submit" class="btn btn-info btn-fill pull-right"><i *ngIf="!isEdit" class="fa fa-save"></i> Guardar</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-user">
+          <div class="content">
+              <div class="card text-center">
+                <br>
+                  <figure>
+                      <img class="img-company-modal" *ngIf="!company.url && !imageSrc"
+                          src="../../../../assets/img/galeria.png">
+                      <img class="img-company-modal" *ngIf="company.url && imageSrc "
+                          [src]="company.url">
+                      <img class="img-company-modal" *ngIf="company.url && !imageSrc"
+                          [src]="company.url"> 
+                      <img class="img-company-modal" *ngIf="!company.url && imageSrc"
+                          [src]="company.url">
+                  </figure>
+                  <br>
+                  <input id=id type="file" class="form-control" name="url"
+                      accept="image/*" (change)="onChangeImage($event)">
+                  <input type="hidden" class="form-control" name="url" id="url"
+                      placeholder="Imagen de la categoría" [(ngModel)]="category.url"
+                      #url="ngModel" required pattern="">
+                  <small
+                      [hidden]="url.valid || (url.pristine && !formCategory.submitted)"
+                      class="text-danger"> Obligatorio</small>
+          </div>
+            <!-- <div class="author">
+              <a href="#">
+                <img class="avatars" src="../../assets/img/galeria.png" width="50%" alt="..." />
+              </a>
+            </div> -->
+          </div>
+          <hr>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

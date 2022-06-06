@@ -1,0 +1,59 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="grd">
+            <div class="content">
+                <div class="grd-row-col-2">
+
+                    <form (ngSubmit)="newTorta(newTortaForm.value)" [formGroup]="newTortaForm">
+                        <div class="content">
+                            <div class="form-group">
+                                <input type="hidden" formControlName="id">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" formControlName="nombre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="url_img">Imagen</label>
+                                <input type="url" formControlName="url" class="form-control">
+
+                            </div>
+                            <div>
+                                <input type="submit" class="btn btn-fill btn-success btn-wd" [disabled]="!newTortaForm.valid"
+                                value="Agregar">
+
+
+                            </div>
+
+
+
+                        </div>
+                    </form>
+
+
+                </div>
+               
+       
+        <div class="grd-row-col-4">
+            <div class="cats_container">
+                <div class="media" *ngFor="let torta of tortas">
+                    <div class="media-figure">
+                        <img [src]="torta.data.url">
+                    </div>
+                    <div class="media-body">
+                        <p>{{torta.data.nombre}}</p>
+                        <div class="btn--group">
+                            <button type="submit" class="btn btn-fill btn-primary btn-wd"
+                                (click)="editTorta(torta.id)">Editar</button>
+                            <button type="submit" class="btn btn-fill btn-danger btn-wd"
+                                (click)="deleteTorta(torta.id)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>

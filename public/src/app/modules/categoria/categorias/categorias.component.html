@@ -1,0 +1,142 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <button type="button" class="btn btn-info btn-fill" (click)="newCategory()"
+                                    data-toggle="modal" data-target="#modalCategory">
+                                    <i class="fa fa-plus"></i> Nueva categoría
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="content">
+                        <div class="fresh-datatables">
+                            <table id="datatablesCategory" class="table table-striped table-no-bordered table-hover"
+                                cellspacing="0" width="100%" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>{{ dataTable.headerRow[0] }}</th>
+                                        <th>{{ dataTable.headerRow[1] }}</th>
+                                        <th>{{ dataTable.headerRow[2] }}</th>
+                                        <th>{{ dataTable.headerRow[3] }}</th>
+                                        <th>{{ dataTable.headerRow[4] }}</th>
+                                        <th>{{ dataTable.headerRow[5] }}</th>
+                                        <th class="disabled-sorting text-right">{{ dataTable.headerRow[5] }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let category of arrayCategory; let i = index">
+                                        <td>{{i+1}}</td>
+                                        <td>{{category.id | slice:8}}</td>
+                                        <td>{{category.nombre}}</td>
+                                        <td>{{category.description}}</td>
+                                        <td><img class="img-category" src="{{category.url}}" alt=""></td>
+                                        <td>
+                                            <button type="submit" class="btn btn-fill btn-primary"
+                                                (click)="selectCategory(category)" data-toggle="modal"
+                                                data-target="#modalCategory">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="btn btn-fill btn-danger"
+                                                (click)="deleteCategory(category.id)">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal category -->
+<div class="modal fade" id="modalCategory" tabindex="-1" role="dialog" aria-labelledby="modalCategoryLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalCategoryLabel">{{isEdit?'Editar categoría':'Nueva categoría'}}</h4>
+            </div>
+            <div class="modal-body">
+                <form #formCategory="ngForm" action="" class="form-horizontal"
+                    (ngSubmit)='addCategory (formCategory.value, formCategory.valid)' novalidate action="/"
+                    method="get">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="text" readonly class="form-control" name="id" id="id" placeholder="ID"
+                                [(ngModel)]="category.id" #id="ngModel" required pattern="">
+                            <small [hidden]="id.valid || (id.pristine && !formCategory.submitted)" class="text-danger">
+                                Obligatorio</small>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="nombre" id="nombre"
+                                placeholder="Nombre de la categoría" [(ngModel)]="category.nombre" #nombre="ngModel"
+                                required pattern="">
+                            <small [hidden]="nombre.valid || (nombre.pristine && !formCategory.submitted)"
+                                class="text-danger"> Obligatorio</small>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="description" id="description"
+                                placeholder="Descripción de la categoría" [(ngModel)]="category.description"
+                                #description="ngModel" required pattern="">
+                            <small [hidden]="description.valid || (description.pristine && !formCategory.submitted)"
+                                class="text-danger"> Obligatorio</small>
+                        </div>
+                        <div class="col-sm-3">
+                            <button [disabled]='!formCategory.valid' type="submit"
+                                class="btn btn-fill btn-success btn-wd btn-block">
+                                <i *ngIf="isEdit" class="fa fa-edit"></i>
+                                <i *ngIf="!isEdit" class="fa fa-save"></i>
+                                {{isEdit?'Editar':'Agregar'}}
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card text-center">
+                                <figure>
+                                    <img class="img-category-modal" *ngIf="!category.url && !imageSrc"
+                                        src="../../../../assets/img/galeria.png">
+                                    <img class="img-category-modal" *ngIf="category.url && imageSrc "
+                                        [src]="category.url">
+                                    <img class="img-category-modal" *ngIf="category.url && !imageSrc"
+                                        [src]="category.url">
+                                    <img class="img-category-modal" *ngIf="!category.url && imageSrc"
+                                        [src]="category.url">
+                                </figure>
+                                <input id=id type="file" class="form-control" name="url" accept="image/*"
+                                    (change)="onChangeImage($event)">
+                                <input type="hidden" class="form-control" name="url" id="url"
+                                    placeholder="Imagen de la categoría" [(ngModel)]="category.url" #url="ngModel"
+                                    required pattern="">
+                                <small [hidden]="url.valid || (url.pristine && !formCategory.submitted)"
+                                    class="text-danger"> Obligatorio</small>
+                            </div>
+                        </div> <br><br><br>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
